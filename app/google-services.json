@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "141823090206",
+    "project_id": "calendar-eae92",
+    "storage_bucket": "calendar-eae92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:141823090206:android:e71828c9f68c430c11980f",
+        "android_client_info": {
+          "package_name": "com.example.customcalendar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6lj4gVacFbt9AAgIIHOIQj3xDn6SVl_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
