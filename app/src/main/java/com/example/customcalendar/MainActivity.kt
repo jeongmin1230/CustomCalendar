@@ -1,6 +1,5 @@
 package com.example.customcalendar
 
-import android.app.Dialog
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -46,8 +45,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import com.example.customcalendar.ui.theme.CustomCalendarTheme
-import com.google.firebase.Firebase
-import com.google.firebase.database.FirebaseDatabase
 import java.time.LocalDate
 
 @Composable
@@ -132,12 +129,12 @@ fun Whole(now: LocalDate) {
                     .border(BorderStroke(1.dp, Color.DarkGray))) {
                     DrawBody(
                         startIndex = LocalDate.of(year.value, month.value, 1).dayOfWeek.toString(),
-                        endDay = now.lengthOfMonth(),
+                        endDay = LocalDate.of(year.value, month.value, day.value).lengthOfMonth(),
                         clickDay = day
                     ) {
                         calendarViewModel.totalDate = "${year.value}-${month.value}-${day.value}"
                         calendarViewModel.load(scheduleList)
-                        calendarViewModel.numSchedule()
+                        calendarViewModel.countSchedule(LocalDate.of(year.value, month.value, day.value).lengthOfMonth().toString())
                         count.forEach {
                             println("개수 : $it")
                         }
